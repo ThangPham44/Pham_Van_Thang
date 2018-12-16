@@ -3,6 +3,7 @@
 <head>
 	<title></title>
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<style type="text/css">
        *{
         margin: 0;
@@ -50,9 +51,9 @@
         color: #cccccc;
        }
        #hình-ảnh1{
-        width: 100%;
+        width: 80%;
         padding-left: 100px;
-
+    
 
        }
        #providing{
@@ -62,10 +63,18 @@
         margin-top: 50px;
         text-align: center;
        }
+       #công-dụng .container{
+        width: 100%;
+       }
        #công-dụng .box{
         width: 23%;
         float: left;
         padding: 10px;
+
+       }
+       #công-dụng .box:hover{
+        color: green;
+        cursor: pointer;
        }
        #main{
         margin-top: 20px;
@@ -99,6 +108,10 @@
         width: 30%;
       
         
+       }
+       #seo .seo1:hover{
+        color: blue;
+        cursor: pointer;
        }
        #easily{
          margin-top: 20px;
@@ -138,6 +151,10 @@
         width: 23%;
         float: left;
         
+       }
+       #what .john:hover{
+        color: gray;
+        cursor: pointer;
        }
        footer{
         margin-left: 100px;
@@ -186,11 +203,37 @@
        #end a:hover{
         color: white;
        } 
-       @media (min-height: 769px) and (max-width: 1560px){
-        
-       }
-       @media (min-height: 480px) and (max-width: 768px){
-
+       @media (min-height: 1025px) and (max-width: 1560px){
+         #body{
+            max-width:1543px ;
+            margin: 0 auto;
+         }
+         img {
+            width: 100%;
+            height: auto;
+         }
+         #công-dụng .container{
+            min-width: 1025px !important;
+            max-width: 1560px !important;
+         }
+          #công-dụng .container .box{
+            width: 23%;
+            float: left;
+          }
+          #boxes .container{
+           width: 100%;
+           height: auto;
+          
+       } 
+       @media (min-height: 481px) and (max-width: 1024px){
+         #công-dụng .container{
+            min-width: 481px !important;
+            max-width: 1024px !important;
+         }
+          #công-dụng .container .box{
+            width: 23%;
+            float: left;
+          }
        }
        @media (max-width: 480px){
         
@@ -203,6 +246,7 @@
 	</style>
 </head>
 <body>
+    <div id="body">
     <header>
         <div class="container">
           <div id="banding">
@@ -222,7 +266,7 @@
 
 
     <div id="hình-ảnh1">
-        <img src="1.jpg">
+       <img src="1.jpg">
     </div>
 
     <section id="providing">
@@ -264,14 +308,14 @@
 
 
     <section id="boxes">
-        <div class="container">
+       <div class="container">
         <div class="box1">
             <img src="6.jpg">
         </div>
          <div class="box2">
             <img src="5.jpg">
         </div>
-    </div>
+       </div>
     </section>
 
 
@@ -380,8 +424,9 @@
                 </ul>
             </nav>
         </div>
-     </div>
+     
     
     </footer>
+    </div>
 </body>
 </html>
