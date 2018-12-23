@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+</head>
+<body>
+	<img src="../embe1-1515732302477.jpg" onmouseover="increase()" onmouseout="decrease()">
+	<input type="button" name="" value="Tăng" onclick="increase()">
+	<input type="button" name="" value="Giảm" onclick="decrease()">
+   Họ Tên: <input type="text" name="" value="" id="fullNameid"
+   class="fullNameclass" placeholder="" >
+   
+      <input type="button" name="" value="Ấn Nhẹ !!!" onclick="fillData()">
+      <span id="content">
+   	
+
+      </span>
+
+      <input type="text" name="" value="" id="txt"
+   class="fullNameclass" placeholder="">
+
+   <span>20000000</span>
+   <select id="opt">
+   	<option value="1">black</option>
+   		<option value="2">white</option>
+   			<option value="3">red</option>
+
+   </select>
+   
+
+
+
+  
+      <script type="text/javascript">
+      	function fillData(){
+      		var fullName = document.getElementsByClassName('fullNameclass');
+        
+           fullName[0].value = "Phạm Văn Thắng";
+
+
+           var content = document.getElementById("content");
+           content.innerHTML = "super man!!";
+           content.style.color = "red";
+           content.style.border = "2px solid red";
+           content.style.fontWeight = "900";
+           content.style.fontSize = "20px";
+       }
+         function decrease(){
+
+           var img = document.getElementsByTagName("img")[0];
+           var width = img.width;
+           var  height = img.height;
+           img.width = width/1.2;
+           img.height = height/1.2;
+           img.style.opacity="1";
+        }
+         function increase(){
+
+           var img = document.getElementsByTagName("img")[0];
+           var width = img.width;
+           var  height = img.height;
+           img.width = width*1.2;
+           img.height = height*1.2;
+           img.style.opacity="0.5";
+        }
+      
+
+   
+
+      var txt = document.getElementById('txt');
+      txt.addEventListener("focus",change);
+           function change(){
+      txt.style.background = "yellow";
+    }
+
+       	var txt = document.getElementById('txt');
+        txt.addEventListener("blur",reset);
+
+         function reset(){
+       	txt.style.background='white';
+       }
+       
+
+       function opt(){
+         var opt = document.getElementById("opt");
+         
+
+
+
+       }
+
+
+
+      	
+      </script>
+</body>
+</html>

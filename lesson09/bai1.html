@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bai1</title>
+</head>
+<body>
+
+		<p>cỡ chữ</p>
+		<input type="button" name="" value="tăng" placeholder="" 
+		onclick="tăng()">
+		<input type="button" name="" value="giảm" placeholder="" onclick="giảm()">
+		<input type="button" name="" value="mặc định" placeholder="" onclick="mặc_định()">
+
+		<p id="txt"><font size="5px" >
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet diam et urna malesuada fermentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+		</font>
+		</p>
+  
+    
+
+    <script type="text/javascript">
+    	
+        
+        function tăng() {
+            var txt = document.getElementById("txt");
+            var size =  parseFloat(txt.style.fontSize);
+            txt.style.fontSize = (parseFloat(size) + parseFloat(size) * 0.4) + "px";
+        }
+        
+        function giảm() {
+            var txt = document.getElementById("txt");
+            var size = parseFloat(txt.style.fontSize);
+            txt.style.fontSize = (parseFloat(size) - parseFloat(size) * 0.4) + "px";
+        }
+          
+        function mặc_định() {
+            var txt = document.getElementById("txt");
+            var size = parseFloat(txt.style.fontSize);
+            txt.style.fontSize = "5px";
+        }
+    	
+    </script>
+</body>
+</html>
