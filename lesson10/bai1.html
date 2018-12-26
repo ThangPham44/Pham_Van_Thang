@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	body{
+		background: #ccc;
+
+	}
+		div{
+
+			background-image: url(../embe1-1515732302477.jpg);
+			background-repeat: no-repeat;
+			
+			font-size: 15px;
+			color: white;
+			border: 1px blue solid;
+			margin-left: 30%;
+			margin-right: 30%;
+			padding-top: 20px;
+			margin-top: 50px;
+			}
+			.button{
+				background: red;
+				border-radius: 10px;
+				margin-left: 40%;
+			}
+			.button1{
+				background: red;
+				border-radius: 10px;
+				margin-left:10%;
+			}
+	}
+
+	</style>
+		
+</head>
+<body>
+	<div >
+	<pre>
+   Họ Và Tên:    	 <input type="text" name2="" value="" placeholder="Nhập họ và tên" class="name"><span class="namer"></span><br><br>
+   Giới Tính:   	 Nam: <input type="radio" name="gender" value="Nam" placeholder="" class="Nam"> Nữ :<input type="radio" name="gender" value="Nữ" placeholder=""><span Namerr></span><br><br>
+               
+   Email:       	 <input type="email" name="" value="" placeholder="Nhập email..." class="email"><span class="emailer"></span>  <br><br>
+   Số điện thoại:     	 <input type="text" name="" value="" placeholder="Nhập sđt..." class="phone"><span class="phoneer"></span><br><br>
+   Mật khẩu:             <input type="password" name="" value="" placeholder="" class="password"><span class="passworder"></span> <br><br>
+   Xác nhận mật khẩu:    <input type="password" name="" value="" placeholder="" class="password1"><span class="pasword1er"> </span><br><br>
+ </div>
+   <input type="button" name="login" value="Đăng ký" placeholder=""  class="button">                      <input type="button" name="" value="Xóa trắng" placeholder="" class="button1">
+
+
+   </pre>   
+       
+   
+
+
+   <script type="text/javascript">
+
+   	   var name2 = document.getElementsByClassName('name')[0];
+   	   name2.addEventListener("blur",function (){
+   	   	   if(name2.value.trim()==''){
+   	   	   	document.getElementsByClassName('namer')[0].innerHTML="Mời bạn nhập tên";
+   	   	   }else if (name2.value.length<8) {
+   	   	   	 document.getElementsByClassName('namer')[0].innerHTML="Tên phải lớn hơn 8 kí tự";
+   	   	   	
+   	   	   }
+   	   	   else{
+   	   	   	document.getElementsByClassName('namer')[0]="^^";
+   	   	   }
+
+
+   	   });
+
+
+
+   	  var email = document.getElementsByClassName('email')[0];
+   	  email.addEventListener("blur",function(){
+   	  	re = /^[a-z_] [\w-]+0[\w.-]+\.[a-z]{2,4}$/i;
+   	  	if (email.value.trim()=='') {
+   	  		document.getElementsByClassName('emailer')[0].innerHTML="Mời nhập email";
+   	  	}else if ( re.test(email)) {
+   	  		document.getElementsByClassName('emailer')[0].innerHTML='';
+   	  	}else{
+   	  		document.getElementsByClassName('emailer')[0].innerHTML='Nhập lại email';
+   	  	}
+
+          
+   	  });
+
+
+   	  var phone = document.getElementsByClassName('phone')[0];
+   	  phone.addEventListener("blur",function(){
+        if (phone.value.trim()=='') {
+        	document.getElementsByClassName('phoneer')[0].innerHTML='Nhập phone';
+        }else if (z5<phone.value.length<=11) {
+        	document.getElementsByClassName('phoneer')[0].innerHTML='';
+        }else{
+        	document.getElementsByClassName('phoneer')[0].innerHTML='Nhập lại phone';
+        }
+   	  });
+
+
+   	  var password = document.getElementsByClassName('password')[0];
+   	   var password1 = document.getElementsByClassName('password1')[0];
+   	  password.addEventListener("blur",function(){
+   	  	password = form.pw.value;
+		password1= form.pw1.value;
+         if (password=password1) {
+         	document.getElementsByClassName('password1er')[0].innerHTML="Mật khẩu đã khớp";
+
+
+         }else{
+         	document.getElementsByClassName('password1er')[0].innerHTML="mật khẩu chưa khớ<p></p>";
+         }
+
+
+        
+   	  });
+   	   var button = document.getElementsByClassName('button')[0];
+   	    button.addEventListener("click",function(){
+   	    	alert("tên:"+name);
+   	    	
+   	    })
+
+
+   </script>
+
+</body>
+</html>

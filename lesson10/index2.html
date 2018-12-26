@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Documert</title>
+	<style type="text/css">
+		#container .section{
+			margin: 2px;
+			background: #ccc;
+		
+	}
+		#container .section .tab{
+			display: block;
+			margin-bottom: 2px;
+
+		}
+		#container .active .tab{
+			background: yellow;
+		}
+		#container .active .content{
+		display: block;
+		}
+		#container .content: {
+			width: 50%;
+			height: 100px;
+			background: #ccc;
+			display: none;
+
+
+		}
+
+
+		
+
+
+		
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="section active">
+         	<span class="tab">
+         		Tab1
+         	</span>
+         </div>
+         	<div class="content">
+         		<input type="text" name="" value="Name" placeholder="">
+         	</div>
+         	<div class="section ">
+         	<span class="tab">
+         		Tab2
+         	</span>
+         </div>
+         	<div class="content">
+         		
+         		<input type="text" name="" value="Name" placeholder="">
+         		
+         	</div>
+         	<div class="section">
+         	<span class="tab">
+         		Tab3
+         	</span>
+         </div>
+         	<div class="content">
+         		<input type="text" name="" value="Name" placeholder="">
+         	
+         	</div>
+
+	</div>
+
+
+	<script type="text/javascript">
+     	var  tabs = document.getElementsByClassName('tab');
+     	for (var i = 0; i < tabs.length; i++) {
+     		tabs[i].addEventListener("click",function(){
+     		var active = document.getElementsByClassName("active")[0]
+     		active.className='section';
+     		this.parentNode.className="section active"
+     	});
+     	}
+     </script>
+
+      
+</body>
+</html>
