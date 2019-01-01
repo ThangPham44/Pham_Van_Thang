@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+	<style type="text/css">
+	body{
+		color: red;
+		background-image:url(../01.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	#container{
+		width: 600px;
+		margin: auto;
+		background: #ccc;
+		color: blue;
+		font-size: 15px;
+		display: block;
+
+	}
+	.box{
+		display: none;
+	}
+	.minus{
+		display: none;
+		color: yellow;
+		
+	}
+	.plus{
+		color: red;
+	}
+	.box1{
+		font-size: 20px;
+		font-style: italic;
+	}
+	.box2{
+		color: black;
+		font-size: 20px;
+		font-family: Kunstler Script;
+	}
+	.box3{
+		color: blue;
+		font-size: 20px;
+		font-family: Algerian;
+	}
+	.box4{
+		font-size: 20px;
+		font-family: Harlow Solid Italic;
+	}
+</style>
+
+</head>
+<body>
+	<center><h1>Hello World</h1><hr color="yellow" size="10px" width="38%"></center>
+	<div id="container">
+		<div id="plus">
+			
+			<div>
+				<h3 class="section"><span class="fa fa-plus-square plus" ></span> <span class="fa fa-minus-square minus"></span> First</h3><hr>
+				<p class="box box1 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum ex eu aliquet iaculis. Duis cursus eu ex quis blandit. Cras semper a mauris eu euismod. Proin vel luctus nisi, a condimentum sapien. Nullam efficitur ipsum purus, sit amet sodales ligula consectetur vel. Pellentesque nec metus erat. Cras vel imperdiet odio. </p><hr>
+			</div>
+			<div>
+				<h3 class="section"><span class="fa fa-plus-square plus"></span> <span class="fa fa-minus-square minus"></span> Second</h3><hr>
+				<p class="box box2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum ex eu aliquet iaculis. Duis cursus eu ex quis blandit. Cras semper a mauris eu euismod. Proin vel luctus nisi, a condimentum sapien. Nullam efficitur ipsum purus, sit amet sodales ligula consectetur vel. Pellentesque nec metus erat. Cras vel imperdiet odio. </p><hr>
+			</div>
+			<div>
+				<h3 class="section"><span class="fa fa-plus-square plus"></span> <span class="fa fa-minus-square minus"></span> Third</h3><hr>
+				<p class="box box3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum ex eu aliquet iaculis. Duis cursus eu ex quis blandit. Cras semper a mauris eu euismod. Proin vel luctus nisi, a condimentum sapien. Nullam efficitur ipsum purus, sit amet sodales ligula consectetur vel. Pellentesque nec metus erat. Cras vel imperdiet odio. </p><hr>
+			</div>
+			<div>
+				<h3 class="section"><span class="fa fa-plus-square plus"></span> <span class="fa fa-minus-square minus"></span> Fourth</h3><hr>
+				<p class="box box4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum ex eu aliquet iaculis. Duis cursus eu ex quis blandit. Cras semper a mauris eu euismod. Proin vel luctus nisi, a condimentum sapien. Nullam efficitur ipsum purus, sit amet sodales ligula consectetur vel. Pellentesque nec metus erat. Cras vel imperdiet odio. </p><hr>
+			</div>
+		</div>
+
+	</div>
+
+	<script>
+		$(function(){
+			$('.plus').click(function(){
+				$(this).parent().siblings().css("display", "block");
+				$(this).css("display", "none");
+				$(this).siblings().css("display", "inline-block");
+			})
+			$('.minus').click(function(){
+				$(this).parent().siblings().css("display", "none");
+				$(this).css("display", "none");
+				$(this).siblings().css("display", "inline-block");
+			})
+		})
+	</script>
+</body>
+</html>

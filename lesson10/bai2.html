@@ -4,41 +4,45 @@
 	<meta charset="utf-8">
 	<title>Document</title>
 	<style type="text/css">
-		#main{
-			margin-top: 50px;
-		}
-		#main .content{
-			width: 800px;
-			height: 600px;
-			position: relative;
-			margin: 0px auto;
-		}
-		#main .content img{
-			width: 800px;
-			height: 600px;
+	#main{
+		margin-top: 50px;
+	}
+	#main .content{
+		width: 800px;
+		height: 600px;
+		position: relative;
+		margin: 0px auto;
+	}
+	#main .content img{
+		width: 800px;
+		height: 600px;
+		position: absolute;
+		z-index: 1;
 		}#main .content input.button1{
-           position: absolute;
-           top:0px;
-           right: 0px;
-           width: 50px;
-           height: 100%;
-           background-color: #808080;
-           opacity: 0;
-           font-size: 18px;
-           line-height: bold;
-           color: blue;
+			position: absolute;
+			top:0px;
+			right: 0px;
+			width: 50px;
+			height: 100%;
+			background-color: #808080;
+			opacity: 0;
+			font-size: 18px;
+			line-height: bold;
+			color: blue;
+			z-index: 2;
 		}
 		#main .content input.button2{
-			 position: absolute;
-           top:0px;
-           left: 0px;
-           width: 50px;
-           height: 100%;
-           background-color: #808080;
-           opacity: 0;
-           font-size: 18px;
-           line-height: bold;
-           color: yellow;
+			position: absolute;
+			top:0px;
+			left: 0px;
+			width: 50px;
+			height: 100%;
+			background-color: #808080;
+			opacity: 0;
+			font-size: 18px;
+			line-height: bold;
+			color: yellow;
+			z-index: 2;
 		}
 		#main .content:hover .button1,#main .content:hover .button2{
 			opacity: 0.6;
@@ -61,59 +65,39 @@
 		.buttonn>.pactive{
 			background-color: red ;
 
-	</style>
-</head>
-<body>
+		</style>
+	</head>
+	<body>
 
-	<div id="main">
-		<div class="content">
-			<img src="../image/01.jpg" name="image" id="image">
-			
-			<input class="button1" type="button" name="img" value="next" onclick="next()">
-			<input class="button2" type="button" name="img" value="back" onclick="back()">
-			<div class="buttonn">
-			<p class="cham pactive" onclick="bt(0)"></p>
-			<p class="cham" onclick="bt(1)"></p>
-			<p class="cham" onclick="bt(2)"></p>
+		<div id="main">
+			<div class="content">
+				<img src="../image/01.jpg" name="image" id="image" class="active">
+				<img src="../image/02.jpg" name="image" id="image">
+				<img src="../image/03.jpg" name="image" id="image">
+
+				<input id="button1" type="button" name="img" value="next" >
+				<input id="button2" type="button" name="img" value="back" >
+				<div class="buttonn">
+					<p class="cham pactive" onclick="bt(0)"></p>
+					<p class="cham" onclick="bt(1)"></p>
+					<p class="cham" onclick="bt(2)"></p>
+				</div>
+			</div>
 		</div>
-		</div>
-	</div>
 
 
-	<script type="text/javascript">
-		var result = 1;
-        function next () {
-           	 
-            
-		if (result == 4) {
-			result=1
-		}
-		result++;
-		document.image.scr="../image/0" +result +".jpg";
-	}
+		<script type="text/javascript">
+		   var button1 = document.getElementById("button1");
+		   button1.addEventListener("click",function(){
+		   	var active = document.getElementsByClassName("active")[0];
+		   	active.className="";
+		   	if (active.nextElementSibling.src!=undefined)
+		   		active.nextElementSibling.className="active";
+		   	else document.getElementsByTagName("img")[0].className="active";
 
 
-			var result = 1;
-        function back () {
-           	 
-            
-		if (result == 4) {
-			result=1
-		}
-		result--;
-		document.image.scr="../image/0" +result +".jpg"
-	}
-	function bt(n){
-			for (var i = img.length-1; i >=0; i--) {
-				img[i].className='img';
-				button[i].className='cham';
-			}
-			dem=n;
-			img[dem].className='img active';
-			button[dem].className='cham pactive';
-		}
-		window.setInterval(function(){ right(); }, 3000);
-  	</script>
+		   });
+		</script>
 
-</body>
-</html>
+	</body>
+	</html>
