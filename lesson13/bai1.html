@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../Css/lightbox.min.css">
+	<style type="text/css">
+		.example-image{
+			height: 200px;
+			width: 500px;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<a href="../image/03.jpg" data-lightbox="example-1"><img src="../image/03.jpg" alt="" class="example-image"></a>
+
+	<a class="example-image-link" href="../image/01.jpg" data-lightbox="example-1"><img class="example-image"  src="../image/01.jpg" alt="image-1" /></a>
+    <a class="example-image-link" href="../image/02.jpg" data-lightbox="example-1" data-title="Optional caption."><img class="example-image" src="../image/02.jpg" alt="image-1"/></a>
+
+	<script src ="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/lightbox.min.js"></script>
+	<script type="text/javascript" src="../js/lightbox-plus-jquery.min.js"></script>
+	<script>
+	    lightbox.option({
+	      'resizeDuration': 2000,
+	      'wrapAround': false,
+	      'positionFromTop': '25px',
+	      'maxWidth': '1000px'
+	    })
+	</script>
+</body>
+</html>
