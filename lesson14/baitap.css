@@ -1,0 +1,28 @@
+.carousel-item{
+	position: relative;
+
+}
+.header{
+	position: absolute;
+	color: white;
+	top: 96px;
+    left: 300px;
+}
+button{
+	border-radius: 15px;
+	
+}
+.main-footer{
+	background: black;
+}
+img{
+	width: 361px;
+	height: 350px;
+}
+.card-body :hover{
+	color: red;
+	cursor: pointer;
+}
+.fa-2x:hover{
+	color: red;
+}
