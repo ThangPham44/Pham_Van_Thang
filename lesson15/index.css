@@ -1,0 +1,10 @@
+.my-auto{
+	background-image: url("../image/Jellyfish.jpg");
+ 	width: 100%;
+ 	height: 400px;
+}
+.jumbotron{
+	background: black !important;
+	color: white;
+	text-align: center;
+}
