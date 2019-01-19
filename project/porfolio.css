@@ -1,6 +1,9 @@
 .porfolios{
 	background: white !important;
 }
+.header :hover{
+	color: red !important;
+}
 
 .input :hover{
 	background: red !important;

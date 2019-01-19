@@ -6,6 +6,9 @@
     background: violet !important;
     line-height: 80px !important;
 }
+.header :hover{
+    color: red !important;
+}
 .cog{
     width: 80px;
     height: 80px;

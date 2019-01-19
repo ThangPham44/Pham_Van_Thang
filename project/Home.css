@@ -1,9 +1,12 @@
-.header1{
-	color: black !important;
+
+.header :hover{
+    color: red !important ;
 }
 
 .header{
 	background: white !important;
+    color: black !important;
+
 }
 .Providing{
 	text-align: center;

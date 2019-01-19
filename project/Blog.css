@@ -1,6 +1,9 @@
 .apr{
     background: #ff0000 !important;
 }
+.header :hover{
+	color: red !important;
+}
 
 .read-more{
 	 background: #ff0000 !important;
