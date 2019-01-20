@@ -17,6 +17,54 @@
 		new WOW().init();
 	</script>
 	<script type="text/javascript" src="Multil.js"></script>
+
+
+
+	<script type="text/javascript">
+		$(function(){
+	$(".button").on("click",function(){
+		var name = $(".name").val();
+		var email=$(".email").val();
+		var phone = $(".phone").val();
+		var note = $(".note").val();
+		var check = 0;
+		if(name ==""){
+			$(".named").html("Vui lòng nhập tên");
+		}else{
+			$(".named").html("");
+			check++;
+		}
+		var first = email.indexOf("@");
+		var last = email.lastIndexOf(".");
+		if(email==""){
+			$(".emailed").html("Vui lòng nhập email");
+		}else if (first<1 || last<first+2 || last+2>=email.length) {
+			$(".emailed").html("Dạng địa chỉ email chưa đúng");
+		}else{
+			$(".emailed").html("");
+			check++;
+		}
+		if(phone==""){
+			$(".phoned").html("Vui lòng nhập số điện thoại");
+		}else  if(isNaN(phone)==true){
+			$(".phoned").html("Vui lòng nhập số điện thoại ở dạng số");
+		}else{
+			$(".phoned").html("");
+			check++;
+		}
+		if(note==""){
+			$(".noted").html("Bạn chưa nhập nội dung");
+		}else{
+			$(".noted").html("");
+			check++;
+		}
+		if(check==4){
+			alert("ok");
+		}
+	});
+	
+});
+	</script>
 </head>
 <body>
 	<div class="container-fluid Contact">
@@ -74,42 +122,46 @@
 			<div class="col-lg-4 col-md-4 col-sm-12">
 				<h2>Beach</h2>
 				<address class="wow rubberBand" data-wow-duration: '2'
-				 data-wow-iteration:'10'>
-					<strong >Quất lâm beach</strong><br>
-					Nam Định city<br>
-					TN<br>
-					TTCT<br>
-					VietNam Country<br>
-					CT21 5SH<br>
-					<abbr title="Phone">P:</abbr> 0941150036
-				</address>
-			</div>
+				data-wow-iteration:'10'>
+				<strong >Quất lâm beach</strong><br>
+				Nam Định city<br>
+				TN<br>
+				TTCT<br>
+				VietNam Country<br>
+				CT21 5SH<br>
+				<abbr title="Phone">P:</abbr> 0941150036
+			</address>
 		</div>
 	</div>
-
+</div>
+<br>
 <div class="container">
 
 	<div class="row">
-		<div class="col-lg-4 col-md-12 col-sm-12">
-			<input type="name" name="" placeholder="name" style="width: 100%;">
+		<div class="col-lg-4 col-md-12 col-sm-12 " >
+			<input type="name"  placeholder="name" style="width: 100%;" class="name" value="">
+			<p class="named"></p>
 		</div>
-		<div class="col-lg-4 col-md-12 col-sm-12">
-			<input type="email" name="" placeholder="Nhập gmail" style="width: 100%;">
+		<div class="col-lg-4 col-md-12 col-sm-12 ">
+			<input type="email" name="" placeholder="Nhập gmail" style="width: 100%;" class="email" value="">
+			<p class="emailed"></p>
 		</div>
-		<div class="col-lg-4 col-md-12 col-sm-12">
-			<input type="Phone" name="" placeholder="Phone" style="width: 100%;">
+		<div class="col-lg-4 col-md-12 col-sm-12 ">
+			<input type="Phone" name="" placeholder="Phone" style="width: 100%;" class="phone" value="">
+			<p class="phoned"></p>
 		</div>
 	</div><br>
 
 
+ 
 
+	<div class="row">
+		<textarea rows="4" cols="500 " class="note" >
 
-<div class="row">
-	<textarea rows="4" cols="500">
-	
-	</textarea>
-</div><br>
-<input type="button" name="" value="Submit Messange" placeholder="Submit Messange" style="background:  red;">
+		</textarea>
+		<p class="noted"></p>
+	</div><br>
+	<input type="button" name="" value="Submit Messange" placeholder="Submit Messange" style="background:  red;" class="button">
 </div>
 </div>
 <br>
